@@ -1,0 +1,30 @@
+drawTree();
+function drawTree() {
+  for (var i = 0; i < 1; i++) {
+    penDown();
+    turnRight(90);
+    moveForward(25);
+    moveForward(25);
+    turnLeft(120);
+    moveForward(25);
+    moveForward(25);
+    turnLeft(120);
+    moveForward(25);
+    moveForward(25);
+    moveForward(25);
+    turnLeft(120);
+    moveForward(25);
+    moveForward(25);
+    moveForward(25);
+    turnLeft(120);
+    moveForward(25);
+    penUp();
+    moveTo(181, 264);
+    penDown();
+    turnLeft(150);
+    moveForward(25);
+    turnLeft(90);
+    moveForward(10);
+    turnLeft(90);
+    moveForward(25);
+    penUp();
