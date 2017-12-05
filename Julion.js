@@ -1,3 +1,6 @@
+//Julion's code
+
+//high level functions
 drawBackground()
 drawSnowman()
 
