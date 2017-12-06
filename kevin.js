@@ -1,105 +1,53 @@
-//high level functions
-drawBackground();
-drawSnowman();
-//making the background
-function drawBackground() {
-  penRGB(0, 0, 237, 1);
-  dot(1000);
-}
-drawTree();
-function drawTree() {
-  penUp();
-  for (var i = 0; i < 1; i++) {
-    moveTo(70, 331);
-    penDown();
-    penRGB(0, 180, 0, 1);
-    penWidth(4);
-    turnRight(90);
-    moveForward(25);
-    moveForward(25);
-    turnLeft(120);
-    moveForward(25);
-    moveForward(25);
-    turnLeft(120);
-    moveForward(25);
-    moveForward(25);
-    moveForward(25);
-    turnLeft(120);
-    moveForward(25);
-    moveForward(25);
-    moveForward(25);
-    turnLeft(120);
-    moveForward(25);
+hide();
+penUp();
+drawAllTrees();
+penUp();
+//`Makes Number of trees
+function drawAllTrees() {
+  for (var i = 0; i < 7; i++) {
     penUp();
-    moveTo(90, 354);
-    penRGB(139, 80, 14, 1);
-    penDown();
-    turnLeft(150);
-    moveForward(25);
-    turnLeft(90);
-    moveForward(10);
-    turnLeft(90);
-    moveForward(25);
-    penUp();
+    turnTo(0);
+    moveTo(randomNumber(25, 350), 400);
+    drawTree();
   }
 }
-
-
-
-
-//drawSnowman function
-drawSnowman();
-function drawSnowman(){
-  drawBody();
-  drawFace();
-  drawButtons();
-  drawArms();
-}
-//body for the snowman
-function drawBody() {
-  penUp();
-  moveTo (267, 397);
+//Makes a Tree
+function drawTree() {
   penDown();
-  penRGB (255, 255, 255, 1);
-  dot (28);
-  moveForward (30);
-  dot (20);
-  moveForward (28);
-  dot (15);
-}
-//face for the snowman
-function drawFace() {
-  //eyes
+  penWidth(15);
+  penColor(rgb(139, 39, 14));
+  moveForward(50);
+  turnRight(90);
+  penColor("green");
+  penWidth(30);
+  drawBigTriangle();
   penUp();
-  moveTo (260, 336);
-  penRGB (0, 0, 0, 1);
-  dot (1);
-  penUp();
-  moveTo (274, 336);
-  dot (1);
-  penUp();
-  //start the smiley face :)
-  moveTo(256, 343);
-  penWidth (1);
+  move(-5, -45);
   penDown();
-  turnLeft(180);
-  arcLeft(180, 10);
-  
+  drawLittleTriangle();
 }
-function drawButtons(){
-  //save for the desktop
-}
-function drawArms() {
-  
-}
-//drawing the ground
-function drawGround() {
-  penUp();
-  moveTo(320, 449);
-  penDown();
-  penRGB(255, 255, 255, 1);
-  penWidth(90);
+//Makes the first part of the tree
+function drawBigTriangle() {
+  moveForward(25);
+  turnLeft(135);
+  moveForward(50);
   turnLeft(90);
-  moveForward(1000);
+  moveForward(25);
+  turnLeft(135);
+  moveForward(25);
+  penUp();
+  penRGB(0, 151, 0, 0.8);
+  move(10, 10);
+  penDown();
+  dot(12);
 }
-drawGround();
+//Makes the small part of tree on top
+function drawLittleTriangle() {
+  moveForward(15);
+  turnLeft(135);
+  moveForward(30);
+  turnLeft(90);
+  moveForward(30);
+  turnLeft(135);
+  moveForward(15);
+}
